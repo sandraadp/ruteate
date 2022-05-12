@@ -1,0 +1,328 @@
+/* ********** Custom Properties ********** */
+
+/*
+    La pseudo-clase :root de CSS selecciona el elemento raíz de un árbol que representa el documento. En HTML, :root representa el elemento <html> y es idéntico al selector html, excepto que su especificidad es mayor.
+    Puede ser útil para declarar variables globales
+*/
+
+:root {
+    --main-font: 'Arial';
+    --alternate-font: sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+  
+    --main-color: #5E8A75;
+    --main-modal-color: rgb(94,138,117);
+    --second-color: #D13661;
+  
+    --bg-color: #FFF;
+    --bg-modal-color: rgb(255,255,255);
+    --bg-alternate-color: #E9E6E1;
+    --bd-alternate-modal-color: rgb(233,230,225);
+    --text-color: #2B475C;
+    
+    --title-color: var(--text-color);
+  
+    --link-color: var(--text-color);
+    --link-hover-color: var(--main-color);
+  
+    --max-width: 1200px;
+    --header-height: 5rem;
+  
+    --logo-width: 4rem;
+    --logo-height: 4rem;
+    --logo-spacing: .5rem;
+  
+    --nav-height: 64px;
+}
+  
+/*
+* Hacemos el reseteo de los estilos pertinenetes
+*/
+/* ********** Reset Styles ********** */
+html {
+    font-family: var(--main-font), var(--alternate-font);
+    font-size: var(--font-size);
+    line-height:  var(--line-height);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+body {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: all .3s ease-out;
+}
+
+a:hover { 
+    color: var(--link-hover-color); 
+}
+
+::selection {
+    background-color: var(--second-color);
+    color: var(--text-color);
+}
+
+
+/*
+* En este apartado se definen los estilos propios que hemos definido para las clases de Bootstrap 
+*/
+/* ********** Bootstrap Styles ********** */
+
+.navbar-brand > img{
+    width: auto;
+    height: 2.5rem;
+}
+
+.navbar{
+    background-color: #F2F6F6;
+    color: var(--text-color) ;
+    padding: 0;
+}
+
+a.dropdown-item {
+    color: var(--text-color);
+}
+
+a.dropdown-item:hover{
+    color: var(--bg-color);
+    background-color: var(--second-color);
+    opacity: 0.6;
+}
+
+.dropdown-header{
+    color: var(--second-color);
+}
+
+/*
+* Se definen los estilos de nuestras porpias clases y elementos
+*/
+/* ********** My Styles ********** */
+
+.btn-home{
+    color: var(--second-color);
+    font-weight: bolder;
+}
+
+.form-label{
+    font-weight: bolder;
+}
+
+.btn-form{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: bolder;
+}
+
+.btn-form:hover{
+    background-color: var(--bg-color);
+    border: 3px solid var(--text-color);
+    color: var(--main-color);
+}
+
+.secondary-link{
+    color: var(--second-color);
+}
+
+.secondary-link:hover{
+    color: var(--second-color);
+    text-decoration: underline;
+}
+
+.paragraph{
+    max-width: 540px;
+}
+
+.form-delete-user{
+    max-width: 540px;
+    background-color: #e9e9e9;
+}
+
+.secondary-title{
+    color: var(--second-color);
+}
+
+.btn-add-delete{
+    background-color: #4B4144;
+    color:var(--bg-color);
+    font-weight: bolder;
+}
+
+.btn-add-delete:hover{
+    background-color: var(--second-color);
+}
+
+.back{
+    color: var(--text-color);
+}
+
+.back:hover{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.Footer{
+    background-color: var(--bg-alternate-color);
+}
+
+button > .fa-user-circle{
+   color: var(--second-color);
+   font-size: 1.5rem;
+}
+
+button > .registered-user{
+    color: var(--main-color);
+}
+  
+
+
+header{
+    background-image: url("/assets/images/road.jpg"); 
+    background-color: #cccccc; 
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.text-header{
+    color: var(--text-color);
+    font-weight: bolder;
+    font-size: 2rem;
+    display: none;
+}
+
+
+/* Añadir esrtilo a la clase .error-form para mostrar los errores en los formularios*/
+.error-form{
+    display: none;
+    color: var(--second-color);;
+}
+
+.success-form{
+    color: var(--text-color);
+}
+
+#respuesta{
+    display: none;
+}
+
+.list-statics{
+    font-size: 1rem;
+}
+
+.card-text{
+    font-size: 14px;
+}
+
+hr{
+    width: 80%;
+}
+
+
+.information-messagge{
+    height: 100%;
+}
+
+#userMenuLogin{
+    z-index: 3000;
+}
+
+/*img avatar*/
+#img-avatar{
+    width:200px;
+    height:200px;
+    border-radius:150px;
+    border: 1px solid black;
+    display: block;
+    margin:auto;
+}
+
+/* Menu donfiguration user*/
+.configuration-options a{
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.configuration-options a:hover{
+    background-color: var(--main-color);
+    color:white;
+}
+
+.configuration-options + div > a:first-child{
+    border-top: 1px solid black;
+}
+
+
+/*
+* Se definen los estilos para los componentes del mapa
+*/
+/* ********** My style Leaftlet ************ */
+
+#map { 
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.leaflet-control-attribution{
+    padding: 0;
+}
+
+
+.awesome-marker  {
+	font-size: 18px;
+}
+
+.fa-caret-left{
+    color: 'white';
+}
+
+.notice{
+    color: black;
+    background-color: var(--main-color);
+    font-weight: bolder;
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+
+.notice-error{
+    color: black;
+    background-color: var(--second-color);
+    font-weight: bolder;
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+
+.monument-paragraph{
+    margin-left: 1rem;
+}
+
+.leaflet-sidebar-header{
+    background-color: var(--main-color);
+}
+
+.leaflet-sidebar-tabs > li.active, .leaflet-sidebar-tabs > ul > li.active {
+    background-color: var(--main-color);
+}
+
+.leaflet-sidebar-pane-title{
+    font-size: 2rem;
+}
+
+.lorem{
+    font-size: 1rem;
+}
